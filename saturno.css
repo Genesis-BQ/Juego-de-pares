@@ -1,0 +1,75 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: radial-gradient(#0b6a80, #034757);
+}
+
+.title{
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 20px;
+}
+
+.rings{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 50px #8D8274;
+    transform: rotate3d(1,0,0,70deg);
+    transform-style: preserve-3d;
+}
+
+.rings::before{
+    content: '';
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+    border: solid 20px #021c27;
+}
+
+.rings::after{
+    content: '';
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    border: solid 20px rgba(112, 164, 194, 0.5);
+}
+
+.planet{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: url(img/saturn.jpg);
+    transform: rotate3d(-1,0,0,60deg);
+    box-shadow: inset -20px 0 10px rgba(0, 0, 0, 0.502);
+}
+
+.juego {
+    position: absolute;
+    bottom: 20px; 
+    text-align: center;
+    width: 80%;
+    background: linear-gradient(#0b6a80, #034757);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.juego:hover {
+    background: linear-gradient(#034757, #0b6a80);
+}
+
